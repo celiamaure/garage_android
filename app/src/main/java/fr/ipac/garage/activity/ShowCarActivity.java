@@ -1,6 +1,8 @@
 package fr.ipac.garage.activity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +25,7 @@ public class ShowCarActivity extends AppCompatActivity {
     private TextView available;
     private TextView color;
     private TextView cylinder;
+    private Button changeAvailability;
 
 
     @Override
@@ -30,7 +33,7 @@ public class ShowCarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_car);
 
-        Car car = getIntent().getExtras().getParcelable("carkey");
+        final Car car = getIntent().getExtras().getParcelable("carkey");
 
         picture = findViewById(R.id.picture);
         brand = findViewById(R.id.brand);
@@ -44,8 +47,11 @@ public class ShowCarActivity extends AppCompatActivity {
         available = findViewById(R.id.availability);
         color = findViewById(R.id.color);
         cylinder = findViewById(R.id.cylinder);
+        changeAvailability = findViewById(R.id.changeAvailability);
 
+        //TODO fixer ca:
         //picture.setImageURI(car.getPicture());
+
         brand.setText(car.getBrand());
         model.setText(car.getModel());
         gearBox.setText(car.getGearBox());
@@ -54,13 +60,34 @@ public class ShowCarActivity extends AppCompatActivity {
         fuel.setText(car.getFuel());
         mileage.setText(car.getMileage().toString());
         doorNumber.setText(car.getDoorNumber().toString());
-        //TODO: faire une confition
+
         if (car.getAvailable()) {
             available.setText("Disponible");
+            changeAvailability.setText("Reserver");
+            changeAvailability.setBackgroundColor(getResources().getColor(R.color.green));
         } else {
             available.setText("Indisponible");
+            changeAvailability.setText("Supprimer la reservation");
+            changeAvailability.setBackgroundColor(getResources().getColor(R.color.red));
         }
         color.setText(car.getColor());
         cylinder.setText(car.getCylinder());
+
+        changeAvailability.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                car.setAvailable(!car.getAvailable());
+                if (car.getAvailable()) {
+                    available.setText("Disponible");
+                    changeAvailability.setText("Reserver");
+                    changeAvailability.setBackgroundColor(getResources().getColor(R.color.green));
+                } else {
+                    available.setText("Indisponible");
+                    changeAvailability.setText("Supprimer la reservation");
+                    changeAvailability.setBackgroundColor(getResources().getColor(R.color.red));
+                }
+
+            }
+        });
     }
 }

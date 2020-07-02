@@ -10,3 +10,4 @@ Liste des fonctionnalité:
 - Ajouter des labels dans la description des voitures
 - Ajouetr la photo correctement
 - Ajouter un bouton retour dans la view "show_car"
+- Ajouter un bouton pour rendre la voiture dispo/non-dispo

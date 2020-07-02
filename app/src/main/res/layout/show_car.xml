@@ -27,7 +27,8 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_height="match_parent">
                 <LinearLayout
                     android:orientation="vertical"
@@ -39,7 +40,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="22sp"
-                        android:layout_margin="10dp"
+                        android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/brand"
                         android:text="Brand"/>
@@ -47,7 +48,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="22sp"
-                        android:layout_margin="10dp"
+                        android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/model"
                         android:text="Model"/>
@@ -55,7 +56,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="22sp"
-                        android:layout_margin="10dp"
+                        android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/type"
                         android:text="Type"/>
@@ -63,7 +64,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="22sp"
-                        android:layout_margin="10dp"
+                        android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/availability"
                         android:text="Availability"/>
@@ -71,10 +72,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="22sp"
-                        android:layout_margin="10dp"
+                        android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/state"
                         android:text="state"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="22sp"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="start"
+                        android:id="@+id/gearBox"
+                        android:text="GearBox"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -87,7 +96,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="22sp"
-                        android:layout_margin="10dp"
+                        android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/cylinder"
                         android:text="Cylinder"/>
@@ -95,7 +104,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="22sp"
-                        android:layout_margin="10dp"
+                        android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/mileage"
                         android:text="Mileage"/>
@@ -103,7 +112,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="22sp"
-                        android:layout_margin="10dp"
+                        android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/color"
                         android:text="Color"/>
@@ -111,7 +120,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="22sp"
-                        android:layout_margin="10dp"
+                        android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/doorNumber"
                         android:text="Door Number"/>
@@ -119,24 +128,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="22sp"
-                        android:layout_margin="10dp"
+                        android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/fuel"
                         android:text="Fuel"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="22sp"
-                        android:layout_margin="10dp"
-                        android:layout_gravity="start"
-                        android:id="@+id/gearBox"
-                        android:text="GearBox"/>
                 </LinearLayout>
-
-
             </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Changer dispo"
+                android:id="@+id/changeAvailability"
+                >
 
-
+            </Button>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
