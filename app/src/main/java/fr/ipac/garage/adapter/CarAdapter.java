@@ -1,5 +1,6 @@
 package fr.ipac.garage.adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +18,10 @@ import java.util.ArrayList;
 
 import fr.ipac.garage.R;
 import fr.ipac.garage.activity.MainActivity;
+import fr.ipac.garage.activity.ShowCarActivity;
+import fr.ipac.garage.manager.CarManager;
 import fr.ipac.garage.model.Car;
+import fr.ipac.garage.utils.ActivityUtils;
 
 public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder> {
 
@@ -51,14 +55,16 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder> {
         }
 
         //TODO: au clic, rediriger vers la fiche produit et lui passer l'objet "car"
-        /*viewHolder.container.setOnClickListener(new View.OnClickListener() {
+        viewHolder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ProfileManager.getInstance().setPlayer(player);
-                ActivityUtils.launchActivity(activity, MainActivity.class, ActivityUtils.TYPE_SLIDE);
+                Intent intent = new Intent(activity, ShowCarActivity.class);
+                intent.putExtra("carkey", car);
+
+                ActivityUtils.launchActivity(activity, intent, ActivityUtils.TYPE_SLIDE);
             }
 
-        });*/
+        });
     }
 
     @Override

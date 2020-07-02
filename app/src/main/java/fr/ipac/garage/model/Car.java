@@ -1,6 +1,9 @@
 package fr.ipac.garage.model;
 
-public class Car {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Car implements Parcelable {
     String picture;
     String brand;
     String model;
@@ -137,4 +140,52 @@ public class Car {
     public void setType(String type) {
         this.type = type;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.brand);
+        dest.writeString(this.color);
+        dest.writeString(this.model);
+        dest.writeString(this.cylinder);
+        dest.writeString(this.fuel);
+        dest.writeString(this.gearBox);
+        dest.writeString(this.picture);
+        dest.writeString(this.type);
+        dest.writeString(this.state);
+        //TODO: require api level
+        dest.writeByte(this.available ? (byte) 1 : (byte) 0);
+        dest.writeInt(this.doorNumber);
+        dest.writeInt(this.mileage);
+    }
+
+    protected Car(Parcel in) {
+        this.brand = in.readString();
+        this.color = in.readString();
+        this.model = in.readString();
+        this.cylinder = in.readString();
+        this.fuel = in.readString();
+        this.gearBox = in.readString();
+        this.picture = in.readString();
+        this.type = in.readString();
+        this.state = in.readString();
+        this.available = in.readByte() != 0;
+        this.doorNumber = in.readInt();
+        this.mileage = in.readInt();
+    }
+
+    public static final Creator<Car> CREATOR = new Creator<Car>() {
+        @Override
+        public Car createFromParcel(Parcel source) {
+            return new Car(source);
+        }
+        @Override
+        public Car[] newArray(int size) {
+            return new Car[size];
+        }
+    };
 }
