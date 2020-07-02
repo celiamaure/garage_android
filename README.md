@@ -5,3 +5,8 @@ Liste des fonctionnalité:
 - Filtrer les voitures par type sur la page principale
 - Changer le status d'une voiture (reservé/vendu/libre)
 - Ajouter une voiture au parc
+
+//TODO:
+- Ajouter des labels dans la description des voitures
+- Ajouetr la photo correctement
+- Ajouter un bouton retour dans la view "show_car"
