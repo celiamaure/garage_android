@@ -12,6 +12,7 @@ public class Car {
     String gearBox;
     String state;
     String type;
+    Boolean available;
 
     public Car(
             String picture,
@@ -24,7 +25,8 @@ public class Car {
             String fuel,
             String gearBox,
             String state,
-            String type
+            String type,
+            Boolean available
     ) {
         setPicture(picture);
         setBrand(brand);
@@ -37,6 +39,15 @@ public class Car {
         setGearBox(gearBox);
         setState(state);
         setType(type);
+        setAvailable(available);
+    }
+
+    public Boolean getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(Boolean available) {
+        this.available = available;
     }
 
     public String getPicture() {
