@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.ListIterator;
@@ -14,25 +17,32 @@ import java.util.ListIterator;
 import fr.ipac.garage.R;
 import fr.ipac.garage.adapter.CarAdapter;
 import fr.ipac.garage.model.Car;
+import fr.ipac.garage.utils.ActivityUtils;
 
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ArrayList<Car> cars;
+    private MainActivity activity;
 
     private RadioButton all;
     private RadioButton sells;
     private RadioButton rents;
 
+    private FloatingActionButton add;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        activity = this;
         recyclerView = findViewById(R.id.display_cars_rv);
 
         all = findViewById(R.id.radioAll);
         sells = findViewById(R.id.radioSell);
         rents = findViewById(R.id.radioRent);
+        add = findViewById(R.id.add);
 
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 
@@ -80,6 +90,16 @@ public class MainActivity extends AppCompatActivity {
                 recyclerView.getAdapter().notifyDataSetChanged();
             }
         });
+
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, AddCarActivity.class);
+                ActivityUtils.launchActivity(activity, intent, ActivityUtils.TYPE_SLIDE);
+            }
+        });
+
 
         recyclerView.setAdapter(new CarAdapter(this, cars));
     }
