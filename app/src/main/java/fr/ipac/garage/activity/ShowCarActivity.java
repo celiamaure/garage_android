@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import com.squareup.picasso.Picasso;
 import fr.ipac.garage.R;
 import fr.ipac.garage.model.Car;
 
@@ -49,8 +49,7 @@ public class ShowCarActivity extends AppCompatActivity {
         cylinder = findViewById(R.id.cylinder);
         changeAvailability = findViewById(R.id.changeAvailability);
 
-        //TODO fixer ca:
-        //picture.setImageURI(car.getPicture());
+        Picasso.get().load(car.getPicture()).into(picture);
 
         brand.setText(car.getBrand());
         model.setText(car.getModel());

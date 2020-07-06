@@ -73,7 +73,6 @@ public class AddCarActivity extends AppCompatActivity {
                         !cylinder.getText().toString().isEmpty()
                        ) {
 
-                    //TODO ajouter l'image
                     Car car = new Car(
                             imageUrl,
                             brand.getText().toString(),

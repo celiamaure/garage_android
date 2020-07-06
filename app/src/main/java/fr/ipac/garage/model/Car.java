@@ -157,7 +157,6 @@ public class Car implements Parcelable {
         dest.writeString(this.picture);
         dest.writeString(this.type);
         dest.writeString(this.state);
-        //TODO: require api level
         dest.writeByte(this.available ? (byte) 1 : (byte) 0);
         dest.writeInt(this.doorNumber);
         dest.writeInt(this.mileage);
