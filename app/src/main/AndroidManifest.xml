@@ -19,11 +19,16 @@
         <activity
             android:name=".activity.ShowCarActivity"
             android:theme="@style/AppTheme"
+            android:parentActivityName=".activity.MainActivity"
+            android:label="Details du véhicule"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".activity.AddCarActivity"
             android:theme="@style/AppTheme"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:label="Ajouter une voiture"
+            android:parentActivityName=".activity.MainActivity"
+            />
     </application>
 
 </manifest>

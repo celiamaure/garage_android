@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Ajouter une voiture"
+            android:text="@string/add_car"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20sp"/>
 
@@ -29,7 +29,7 @@
             android:inputType="text"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:hint="Brand"/>
+            android:hint="@string/brand"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
             android:inputType="text"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:hint="Model"/>
+            android:hint="@string/model"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -51,7 +51,7 @@
             android:inputType="text"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:hint="Cylinder"/>
+            android:hint="@string/cylinder"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
             android:inputType="text"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:hint="Mileage"/>
+            android:hint="@string/mileage"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -73,7 +73,7 @@
             android:inputType="text"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:hint="Color"/>
+            android:hint="@string/color"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -81,10 +81,10 @@
             android:id="@+id/doorNumber"
             android:textSize="15sp"
             android:textAlignment="center"
-            android:inputType="text"
+            android:inputType="number"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:hint="Number of door"/>
+            android:hint="@string/door_number"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -95,7 +95,7 @@
             android:inputType="text"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:hint="Fuel"/>
+            android:hint="@string/fuel"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -106,7 +106,7 @@
             android:inputType="text"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:hint="Gear Box"/>
+            android:hint="@string/gear_box"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -117,7 +117,7 @@
             android:inputType="text"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:hint="State"/>
+            android:hint="@string/state"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -128,7 +128,7 @@
             android:inputType="text"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:hint="Type"/>
+            android:hint="@string/type"/>
 
         <ImageView
             android:id="@+id/image"
@@ -141,7 +141,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="Valider"
+            android:text="@string/validate"
             android:layout_marginBottom="50dp"/>
 
     </LinearLayout>

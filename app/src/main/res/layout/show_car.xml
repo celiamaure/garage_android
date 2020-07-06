@@ -43,7 +43,7 @@
                         android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/brand"
-                        android:text="Brand"/>
+                        android:text="@string/brand"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
                         android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/model"
-                        android:text="Model"/>
+                        android:text="@string/model"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
                         android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/type"
-                        android:text="Type"/>
+                        android:text="@string/type"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
                         android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/availability"
-                        android:text="Availability"/>
+                        android:text="@string/availability"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
                         android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/state"
-                        android:text="state"/>
+                        android:text="@string/state"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
                         android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/gearBox"
-                        android:text="GearBox"/>
+                        android:text="@string/gear_box"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -99,7 +99,7 @@
                         android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/cylinder"
-                        android:text="Cylinder"/>
+                        android:text="@string/cylinder"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
                         android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/mileage"
-                        android:text="Mileage"/>
+                        android:text="@string/mileage"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -115,7 +115,7 @@
                         android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/color"
-                        android:text="Color"/>
+                        android:text="@string/color"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -123,7 +123,7 @@
                         android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/doorNumber"
-                        android:text="Door Number"/>
+                        android:text="@string/door_number"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -131,13 +131,13 @@
                         android:layout_margin="5dp"
                         android:layout_gravity="start"
                         android:id="@+id/fuel"
-                        android:text="Fuel"/>
+                        android:text="@string/fuel"/>
                 </LinearLayout>
             </LinearLayout>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Changer dispo"
+                android:text="@string/change_availability"
                 android:id="@+id/changeAvailability"
                 >
 

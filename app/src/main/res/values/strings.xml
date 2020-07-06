@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">garage</string>
+    <string name="app_name">Garage</string>
+    <string name="all">Tous</string>
+    <string name="sells">Ventes</string>
+    <string name="rents">Locations</string>
+    <string name="add_car">Ajouter une voiture</string>
+    <string name="brand">Marque</string>
+    <string name="model">Model</string>
+    <string name="cylinder">Cyindré</string>
+    <string name="mileage">Kilométrage</string>
+    <string name="color">Couleur</string>
+    <string name="door_number">Nombre de portes</string>
+    <string name="fuel">Carburant</string>
+    <string name="gear_box">Boite de vitesses</string>
+    <string name="state">Etat</string>
+    <string name="type">Type (vente/occas)</string>
+    <string name="validate">Valider</string>
+    <string name="availability">Disponibilité</string>
+    <string name="change_availability">Changer la dispo</string>
 </resources>
